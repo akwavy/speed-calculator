@@ -3,6 +3,7 @@ from PyQt6.QtWidgets import QApplication, QWidget, QLabel, QLineEdit, QComboBox,
     QGridLayout, QPushButton
 
 
+
 class SpeedCalculator(QWidget):
     def __init__(self):
         super().__init__()
@@ -25,6 +26,7 @@ class SpeedCalculator(QWidget):
 
         self.result_label = QLabel("")
 
+
         # Add widgets to grid
         grid.addWidget(distance_label, 0, 0)
         grid.addWidget(self.distance_input, 0, 1)
@@ -42,7 +44,7 @@ class SpeedCalculator(QWidget):
         time = float(self.time_input.text())
 
         # Calculate average speed
-        speed = distance/time
+        speed = distance/time 
 
         # Check what user chose in the combo
         if self.unit_combo.currentText() == 'Metric (km)':
